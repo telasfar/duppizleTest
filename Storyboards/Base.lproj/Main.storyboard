@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BxQ-NS-fdJ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Product View Controller-->
+        <scene sceneID="Fhg-c1-uND">
+            <objects>
+                <viewController storyboardIdentifier="ProductViewController" id="BxQ-NS-fdJ" customClass="ProductViewController" customModule="DuppizleTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9cO-Nj-Clh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQK-3F-Hlw" customClass="RoundedShadowView" customModule="DuppizleTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="134.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Products" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQn-7U-ZEi">
+                                        <rect key="frame" x="103.5" y="62.5" width="207" height="41"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="hyperBlue"/>
+                                <constraints>
+                                    <constraint firstItem="gQn-7U-ZEi" firstAttribute="width" secondItem="kQK-3F-Hlw" secondAttribute="width" multiplier="0.5" id="Tz2-MA-v7M"/>
+                                    <constraint firstItem="gQn-7U-ZEi" firstAttribute="centerX" secondItem="kQK-3F-Hlw" secondAttribute="centerX" id="V8x-7t-l9n"/>
+                                    <constraint firstItem="gQn-7U-ZEi" firstAttribute="centerY" secondItem="kQK-3F-Hlw" secondAttribute="centerY" constant="16" id="tWF-Df-Yb4"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="160" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="26k-FI-szi" customClass="TanibleView" customModule="DuppizleTest" customModuleProvider="target">
+                                <rect key="frame" x="2" y="150.5" width="410" height="687.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="4" maxX="0.0" maxY="4"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gbe-HD-lHr"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Gbe-HD-lHr" firstAttribute="bottom" secondItem="26k-FI-szi" secondAttribute="bottom" constant="24" id="4qm-d4-eNh"/>
+                            <constraint firstItem="26k-FI-szi" firstAttribute="leading" secondItem="Gbe-HD-lHr" secondAttribute="leading" constant="2" id="ED0-A5-X9n"/>
+                            <constraint firstItem="Gbe-HD-lHr" firstAttribute="trailing" secondItem="26k-FI-szi" secondAttribute="trailing" constant="2" id="NZw-dF-McK"/>
+                            <constraint firstItem="kQK-3F-Hlw" firstAttribute="leading" secondItem="Gbe-HD-lHr" secondAttribute="leading" id="W9C-cU-YIP"/>
+                            <constraint firstItem="kQK-3F-Hlw" firstAttribute="trailing" secondItem="Gbe-HD-lHr" secondAttribute="trailing" id="WdN-zc-U0z"/>
+                            <constraint firstItem="26k-FI-szi" firstAttribute="top" secondItem="kQK-3F-Hlw" secondAttribute="bottom" constant="16" id="cHo-lz-8Kv"/>
+                            <constraint firstItem="kQK-3F-Hlw" firstAttribute="height" secondItem="9cO-Nj-Clh" secondAttribute="height" multiplier="0.15" id="jzl-h4-LWZ"/>
+                            <constraint firstItem="kQK-3F-Hlw" firstAttribute="top" secondItem="9cO-Nj-Clh" secondAttribute="top" id="oj9-Ha-i18"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="productTableView" destination="26k-FI-szi" id="ozn-UC-WH6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qeg-GD-XUk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="365" y="125"/>
+        </scene>
+        <!--Product DetailsVC-->
+        <scene sceneID="ikP-L2-Agp">
+            <objects>
+                <viewController storyboardIdentifier="ProductDetailsVC" id="36p-9u-O3u" customClass="ProductDetailsVC" customModule="DuppizleTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sav-kO-Bk1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YzV-yn-cGr" customClass="RoundedShadowView" customModule="DuppizleTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="134.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="aY7-PD-mda">
+                                        <rect key="frame" x="16" y="63" width="41.5" height="40.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEc-z5-Vvq">
+                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="40.5"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="back"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LC2-Bu-sfA">
+                                        <rect key="frame" x="62" y="62.5" width="290" height="41"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="hyperBlue"/>
+                                <constraints>
+                                    <constraint firstItem="LC2-Bu-sfA" firstAttribute="centerY" secondItem="YzV-yn-cGr" secondAttribute="centerY" constant="16" id="6hA-ah-FTh"/>
+                                    <constraint firstItem="aY7-PD-mda" firstAttribute="leading" secondItem="YzV-yn-cGr" secondAttribute="leading" constant="16" id="YPP-Og-Byk"/>
+                                    <constraint firstItem="aY7-PD-mda" firstAttribute="centerY" secondItem="LC2-Bu-sfA" secondAttribute="centerY" id="Z00-B6-8E2"/>
+                                    <constraint firstItem="aY7-PD-mda" firstAttribute="width" secondItem="YzV-yn-cGr" secondAttribute="width" multiplier="0.1" id="aXn-Ul-23Q"/>
+                                    <constraint firstItem="LC2-Bu-sfA" firstAttribute="centerX" secondItem="YzV-yn-cGr" secondAttribute="centerX" id="dqk-eR-7v8"/>
+                                    <constraint firstItem="aY7-PD-mda" firstAttribute="height" secondItem="YzV-yn-cGr" secondAttribute="height" multiplier="0.3" id="hfL-En-knp"/>
+                                    <constraint firstItem="LC2-Bu-sfA" firstAttribute="width" secondItem="YzV-yn-cGr" secondAttribute="width" multiplier="0.7" id="mP1-Cz-Nc6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="j9v-JB-uBk"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YzV-yn-cGr" firstAttribute="height" secondItem="sav-kO-Bk1" secondAttribute="height" multiplier="0.15" id="617-RX-4x0"/>
+                            <constraint firstItem="YzV-yn-cGr" firstAttribute="leading" secondItem="j9v-JB-uBk" secondAttribute="leading" id="Kz0-cZ-Kid"/>
+                            <constraint firstItem="YzV-yn-cGr" firstAttribute="trailing" secondItem="j9v-JB-uBk" secondAttribute="trailing" id="SKm-Yf-azj"/>
+                            <constraint firstItem="YzV-yn-cGr" firstAttribute="top" secondItem="sav-kO-Bk1" secondAttribute="top" id="wPO-dl-sNY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnBack" destination="vEc-z5-Vvq" id="MIm-vw-J0r"/>
+                        <outlet property="titleView" destination="YzV-yn-cGr" id="ogY-05-PRU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iwA-tA-zyw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1065" y="113"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="13.5" height="25"/>
+        <namedColor name="hyperBlue">
+            <color red="0.210999995470047" green="0.47900000214576721" blue="0.65499997138977051" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
